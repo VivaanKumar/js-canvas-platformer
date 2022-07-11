@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../styles.css" />
+    <script src="../js/border.js" defer></script>
+    <script src="../js/player.js" defer></script>
+    <script src="../js/index.js" defer></script>
+  </head>
+  <body>
+    <h2>Level 2 - Headbutter!</h2>
+    <div class="container">
+      <div class="vignette">
+        <p id="message">Press enter</p>
+      </div>
+      <canvas width="900" height="450" id="game-canvas"></canvas>
+    </div>
+    <div id="modal">
+      <h1>Level Complete!</h1>
+      <button class="btn" onclick="redoLvl()">Redo Level</button>
+      <button class="btn" onclick="nextLvl()">Next Level</button>
+    </div>
+    <script>
+      let playerX = 70;
+      let playerY = 190;
+      let width = 80;
+      let height = 80;
+      let jumpPower = 20;
+      let maxSpeed = 1;
+      let moveCameraDivide = 1 / 20;
+
+      function setBorders() {
+        for (let i = 0; i < 3; i++) {
+          borders.push(new Border(100 * i, 350, 100, 100, 1));
+        }
+
+        for (let i = 0; i < 30; i++) {
+          borders.push(new Border(100 * i, 50, 100, 100, 1));
+        }
+
+        for (let i = 0; i < 21; i++) {
+          borders.push(new Border(300 + 100 * i, 290, 100, 20, 4, "spike"));
+        }
+
+        borders.push(new Border(2364, 370, 180, 20, 3, "win"));
+
+        for (let i = 0; i < 5; i++) {
+          borders.push(new Border(2500 + 100 * i, 290, 100, 20, 4, "spike"));
+        }
+
+        borders.push(new Border(2980, 150, 20, 180, 4, "spike"));
+
+        // borders.push(new Border(250, 320, 50, 30, 4, "spike"));
+
+        // for (let i = 0; i < 4; i++) {
+        //   borders.push(new Border(400 + 100 * i, 250, 100, 100, 1));
+        // }
+
+        // // borders.push(new Border(550, 220, 50, 30, 4, "spike"));
+        // // borders.push(new Border(700, 220, 50, 30, 4, "spike"));
+
+        // for (let i = 0; i < 2; i++) {
+        //   borders.push(new Border(900, 100 * i - 50, 100, 100, 1));
+        // }
+
+        // borders.push(new Border(900, 150, 100, 30, 4, "spike"));        
+
+        // for (let i = 0; i < 3; i++) {
+        //   borders.push(new Border(1100 + 100 * i, 250, 100, 100, 1));
+        // }
+
+        // borders.push(new Border(1500, 320, 100, 100, 1));
+
+        // borders.push(new Border(1900, 290, 100, 50, 1));
+
+        // borders.push(new Border(2300, 240, 50, 50, 1));
+
+        // borders.push(new Border(2700, 290, 150, 25, 1));
+        // for (let i = 0; i < 10; i++) {
+        //   borders.push(new Border(2700, 180 - i * 25, 25, 25, 1));
+        // }
+
+        // borders.push(new Border(2675, 115, 25, 90, 4, "spike"));
+
+        // for (let i = 0; i < 10; i++) {
+        //   borders.push(new Border(2950 + 50 * i, 180 + i * 10, 25, 25, 1));
+        // }
+
+        // for (let i = 0; i < 10; i++) {
+        //   borders.push(new Border(3550 + 50 * i, 180 + i * 10, 25, 25, 1));
+        // }
+
+        // for (let i = 0; i < 10; i++) {
+        //   borders.push(new Border(4150 + 50 * i, 180 + i * 10, 25, 25, 1));
+        // }
+
+        // borders.push(new Border(4750, 220, 200, 20, 3, "win"));
+
+        // console.log(borders);
+      }
+    </script>
+  </body>
+</html>
